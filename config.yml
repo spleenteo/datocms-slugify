@@ -1,0 +1,10 @@
+---
+models:
+  post:
+    model_id: "633"
+    original_field: "title"
+  author:
+    model_id: "222"
+    original_field: "name"
+
+
