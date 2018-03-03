@@ -26,10 +26,12 @@ puts ENV["DATO_API_TOKEN_RW"]
 client = Dato::Site::Client.new(ENV["DATO_API_TOKEN_RW"])
 puts client
 
+# Load models data via config YAML file
 @exec_path = Pathname.new($0).realpath().sub("datocms_slugify.rb", "")
 @config_file = "#{@exec_path}config.yml"
 yml     = YAML.load_file(@config_file)
 
+# Execute the script!
 header("Models")
 @models  = yml["models"]
 @models.each do |k, model|
